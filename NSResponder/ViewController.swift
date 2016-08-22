@@ -10,6 +10,8 @@ import Cocoa
 
 class ViewController: NSViewController {
 
+    @IBOutlet weak var textField: MyTextField!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +24,8 @@ class ViewController: NSViewController {
         }
     }
 
+    @IBAction func press(sender: AnyObject) {
+        view.window?.makeFirstResponder(textField)
+    }
 
 }
-
